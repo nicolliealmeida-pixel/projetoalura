@@ -61,9 +61,9 @@ header{background-color: rgb(83, 83, 255);}
    <script>
     const botoes= document.querySelectorAll("button")
    botoes.forEach(function(botao) {
-botao.addEventListener("click", botaoClicado);
+botao.addEventListener("click", botoesClicados);
 
-function botaoClicado() {
+function botoesClicados() {
 console.log("fui clicado");
 let texto = botao.querySelector("span");
 texto.textContent+++;
