@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,15 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-
-    <style>
-        header {
-            background-color: rgb(83, 83, 255);
-        }
-    </style>
-</head>
-
-<body>
 
     <style>
         header {
@@ -32,11 +24,11 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
-            display: flex;
         }
 
         article {
             display: flex;
+            margin-bottom: 20px;
         }
 
         img {
@@ -52,6 +44,9 @@
             font-weight: bold;
         }
     </style>
+</head>
+
+<body>
 
     <header>
         <h1>Meu blog tech</h1>
@@ -59,6 +54,7 @@
     </header>
 
     <main>
+
         <article>
             <img src="imagem.png"
                 alt="Ícone quadrado em pixel art com fundo azul-escuro exibindo um livro aberto no centro, de onde saem símbolos de tecnologia como cursor de mouse, engrenagens, código binário, um planeta Terra e um computador.">
@@ -66,34 +62,66 @@
             <div>
                 <h2>Meu primeiro post</h2>
 
-                <p>Por: Nicollie Dias</p>
+                <p class="artigo-autor">Por: Nicollie Dias</p>
 
                 <p>
                     Boas-vindas ao meu novo blog!
                     Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.
                 </p>
 
-                <!-- DOIS BOTÕES -->
                 <button class="botao">💗 <span>0</span></button>
                 <button class="botao">💖 <span>0</span></button>
-  </article>
+            </div>
+        </article>
+
+
+        <article>
+            <img src="imagem.png"
+                alt="Ícone quadrado em pixel art com fundo azul-escuro exibindo um livro aberto no centro, de onde saem símbolos de tecnologia como cursor de mouse, engrenagens, código binário, um planeta Terra e um computador.">
+
+            <div>
+                <h2>Meu segundo post</h2>
+
+                <p class="artigo-autor">Por: Nicollie Dias</p>
+
+                <p>
+                    Hoje vamos falar sobre programação e algumas
+                    curiosidades interessantes sobre tecnologia.
+                </p>
+
+                <button class="botao">💗 <span>0</span></button>
+                <button class="botao">💖 <span>0</span></button>
+            </div>
+        </article>
+
     </main>
+
 
     <script>
         const botoes = document.querySelectorAll(".botao");
 
-        botoes.forEach(function(botao) {
+        botoes.forEach(function (botao) {
+
+            let curtiu = false;
+
             botao.addEventListener("click", botaoclicado);
+
+            function botaoclicado() {
+
+                let texto = botao.querySelector("span");
+
+                if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
+                }
+            }
         });
-
-        function botaoclicado(event) {
-            console.log("fui clicado");
-
-            let texto = event.currentTarget.querySelector("span");
-            texto.textContent++;
-        }
     </script>
 
 </body>
 
 </html>
+```
