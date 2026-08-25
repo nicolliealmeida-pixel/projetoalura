@@ -70,53 +70,5 @@ function botaoclicado(){
     let texto = botao.querySelector("samp")
     texto.textContent++;
     }
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu projeto</title>
-</head>
-
-<body>
-
-    <main>
-        <article>
-            <h1>Programação e curiosidades</h1>
-
-            <p>Aqui vou compartilhar dicas de programação e curiosidades.</p>
-
-            <!-- Primeiro botão -->
-            <button class="botao">
-                💗 <span>0</span>
-            </button>
-
-            <!-- Segundo botão -->
-            <button class="botao">
-                💖 <span>0</span>
-            </button>
-
-        </article>
-    </main>
-
-    <script>
-        const botoes = document.querySelectorAll(".botao");
-
-        botoes.forEach(function(botao) {
-            botao.addEventListener("click", botaoclicado);
-        });
-
-        function botaoclicado(event) {
-            console.log("fui clicado");
-
-            let texto = event.currentTarget.querySelector("span");
-
-            texto.textContent++;
-        }
-    </script>
-
-</body>
-</html>
 </script>
     </html>
