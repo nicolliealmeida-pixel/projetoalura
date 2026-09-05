@@ -1,23 +1,19 @@
- <script>
-        const botoes = document.querySelectorAll(".botao");
+const botoes = document.querySelectorAll(".botao");
 
-        botoes.forEach(function (botao) {
+botoes.forEach(function (botao) {
+    let curtiu = false;
 
-            let curtiu = false;
+    botao.addEventListener("click", function () {
 
-            botao.addEventListener("click", botaoclicado);
+        let texto = botao.querySelector("span");
 
-            function botaoclicado() {
+        if (curtiu === false) {
+            texto.textContent++;
+            curtiu = true;
+        } else {
+            texto.textContent--;
+            curtiu = false;
+        }
 
-                let texto = botao.querySelector("span");
-
-                if (curtiu === false) {
-                    texto.textContent++;
-                    curtiu = true;
-                } else {
-                    texto.textContent--;
-                    curtiu = false;
-                }
-            }
-        });
-    </script>
+    });
+});
