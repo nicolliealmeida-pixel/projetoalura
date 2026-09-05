@@ -8,6 +8,7 @@
     --fonte-texto: 'Segoe UI', sans-serif;
 }
 
+/* MODO ESCURO */
 .tema-escuro {
     --cor-primaria: #20265c;
     --cor-secundaria: #6db5ff;
@@ -17,6 +18,7 @@
     --cor-botao: #252542;
 }
 
+/* PÁGINA */
 body {
     max-width: 100vw;
     margin: 0;
@@ -25,6 +27,17 @@ body {
     color: var(--cor-texto);
 }
 
+/* CABEÇALHO */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    text-align: center;
+    margin: 0 auto;
+    padding: 16px;
+    border: 9px solid #6054d1;
+}
+
+/* CONTEÚDO */
 main {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
@@ -32,26 +45,7 @@ main {
     flex-wrap: wrap;
 }
 
-.tema-escuro p {
-    color: var(--cor-texto);
-}
-
-.tema-escuro a {
-    color: var(--cor-secundaria);
-}
-.btn-tema-escuro {
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-
-    font-size: 32px;
-    padding: 12px;
-
-    background-color: var(--cor-primaria);
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-}
+/* POSTS */
 article {
     display: flex;
     flex-direction: column;
@@ -65,4 +59,78 @@ article {
     padding: 16px;
 
     flex: 1 1 25%;
+}
+
+/* IMAGENS */
+img {
+    width: 80px;
+    height: 80px;
+}
+
+/* AUTOR */
+.artigo-autor {
+    font-weight: bold;
+}
+
+/* FONTE */
+.artigo-fonte {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* PARÁGRAFOS */
+p {
+    font-weight: bold;
+}
+
+/* LINKS */
+a {
+    color: var(--cor-secundaria);
+}
+
+.tema-escuro a {
+    color: var(--cor-secundaria);
+}
+
+/* PARÁGRAFOS NO MODO ESCURO */
+.tema-escuro p {
+    color: var(--cor-texto);
+}
+
+/* TEXTO DO CABEÇALHO NO MODO ESCURO */
+.tema-escuro header p {
+    color: var(--cor-contraste);
+}
+
+/* BOTÕES DE CURTIDA */
+.botao {
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
+
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 8px;
+
+    padding: 8px 14px;
+    margin: 4px;
+
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* BOTÃO DA LUA 🌙 */
+.btn-tema-escuro {
+    position: fixed;
+
+    bottom: 16px;
+    right: 16px;
+
+    font-size: 32px;
+    padding: 12px;
+
+    background-color: var(--cor-primaria);
+
+    border-radius: 50%;
+    border: none;
+
+    cursor: pointer;
 }
