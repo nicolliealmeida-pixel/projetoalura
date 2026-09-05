@@ -1,4 +1,3 @@
-
 const botoes = document.querySelectorAll(".botao");
 
 botoes.forEach(function (botao) {
